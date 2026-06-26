@@ -358,3 +358,40 @@ trademarks or logos is subject to and must follow
 [Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
 Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
 Any use of third-party trademarks or logos are subject to those third-party's policies.
+
+---
+
+## GUI
+
+A desktop GUI for MarkItDown is available in this fork, built with Python's standard Tkinter library. It lets you select one or more files, choose an output folder, and convert them to Markdown with a single click — with a live status log showing success or errors per file.
+
+This GUI is based on [microsoft/markitdown](https://github.com/microsoft/markitdown), which is released under the MIT License.
+
+### Download (pre-built binary)
+
+Download the ready-to-run binary for your platform from the [Releases page](https://github.com/doron2/markitdown/releases):
+
+| Platform | File |
+|---|---|
+| Linux | `markitdown-gui-linux` |
+| Windows | `markitdown-gui-windows.exe` |
+| macOS | `markitdown-gui-macos` |
+
+**Linux:** make the binary executable before running:
+
+```bash
+chmod +x markitdown-gui-linux && ./markitdown-gui-linux
+```
+
+**Windows / macOS:** double-click the downloaded file to launch.
+
+### Run from source
+
+```bash
+git clone https://github.com/doron2/markitdown.git
+cd markitdown
+python3 -m venv .venv
+source .venv/bin/activate          # Windows: .venv\Scripts\activate
+pip install -e 'packages/markitdown[all]'
+python gui/app.py
+```
