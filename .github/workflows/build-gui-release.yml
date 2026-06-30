@@ -20,7 +20,7 @@ jobs:
           - os: windows-latest
             artifact_name: markitdown-gui-windows.exe
             built_file: markitdown-gui.exe
-          - os: ubuntu-latest
+          - os: ubuntu-22.04
             artifact_name: markitdown-gui-linux
             built_file: markitdown-gui
           - os: macos-latest
